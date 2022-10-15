@@ -1,0 +1,178 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hi
+    - whats up
+
+- intent: goodbye
+  examples: |
+    - الّٰلہ حافظ
+    - پھر بات ہو گی
+    - خدا حافظ
+    - بعد میں بات ہو گی
+    - چلیں پھر بات ہو گی
+    - مجھے جانا ہے
+
+- intent: query_knowledge_base
+  examples: |
+    - کوئی اچھا سا [ریسٹورنٹ](restaurant) بتائیں؟
+    - کچھ [ریسٹورنٹس](restaurant) کے نام بتائیں؟
+    - کیا آپ اچھے [ریسٹورنٹس](restaurant) کے نام بتا سکتے ہیں؟
+    - کچھ اچھے [ریسٹورنٹس](restaurant) کے نام دکھائیں
+    - کچھ دیسی [ریسٹورنٹس](restaurant) بتائیں
+    - کوئی [چائنیز](cuisine) [ریسٹورنٹ](restaurant)؟
+    - کوئی [اٹالین](cuisine) [ریسٹورنٹ](restaurant)؟
+    - کوئی [اٹالین](cuisine)؟
+    - کوئی [چائنیز](cuisine)؟
+    - کچھ [ہوٹلز](hotel) کے نام بتائیں؟
+    - کوئی اچھا سا [ہوٹل](hotel) بتائیں؟
+    - کیا آپ اچھے [ہوٹلز](hotel) کے نام بتا سکتے ہیں؟
+    - کچھ اچھے [ہوٹلز](hotel) کے نام دکھائیں
+    - کوئی اچھا سا [ریسٹورنٹ](restaurant) بتائیں؟
+    - کچھ [ریسٹورنٹس](restaurant) کے نام بتائیں؟
+    - کیا آپ اچھے [ریسٹورنٹس](restaurant) کے نام بتا سکتے ہیں؟
+    - کچھ اچھے [ریسٹورنٹس](restaurant) کے نام دکھائیں
+    - کچھ دیسی [ریسٹورنٹس](restaurant) بتائیں
+    - کوئی [چائنیز](cuisine) [ریسٹورنٹ](restaurant)؟
+    - کوئی [اٹالین](cuisine) [ریسٹورنٹ](restaurant)؟
+    - کچھ [ہوٹلز](hotel) کے نام بتائیں؟
+    - کوئی اچھا سا [ہوٹل](hotel) بتائیں؟
+    - کیا آپ اچھے [ہوٹلز](hotel) کے نام بتا سکتے ہیں؟
+    - کچھ اچھے [ہوٹلز](hotel) کے نام دکھائیں
+
+- intent: greet
+  examples: |
+    - ہیلو
+    - ہیلو
+    - خدا حافظ
+    - گڈ مارننگ
+    - گڈ ایوننگ
+    - اسلام علیکم
+    - کوئی ہے
+    - سلام
+
+- intent: bot_challenge
+  examples: |
+    - کیا میں BOT ہوں؟
+    - کیا آپ انسان(Human) ہیں؟
+    - کیا میں ایک BOT سے بات کر رہا ہوں؟
+    - کیا میں ایک انسان(Human) سے بات کر رہا ہوں؟
+
+- lookup: restaurant
+  examples: |
+    - سپائس بازار
+    - دی لکھنوی
+    - انداز ریسٹورنٹ
+    - اربن کچن
+    - لاہور چٹخارہ
+    - واسابی
+    - حویلی ریسٹورنٹ
+
+- lookup: hotel
+  examples: |
+    - پی سی ہوٹل
+    - دی نشاط ہوٹل
+    - فیملی ہوٹل
+    - سٹپ ان ہوٹل
+    - لاہور پیلس ہوٹل
+
+- synonym: hotel
+    - ہوٹلز
+    - ہوٹل
+- synonym: restaurant
+    - ریسٹورنٹ
+#     - ریسٹورنٹس
+# version: "3.1"
+
+# nlu:
+# - intent: greet
+#   examples: |
+#     - hey
+#     - hello
+#     - hi
+#     - hello there
+#     - good morning
+#     - good evening
+#     - moin
+#     - hey there
+#     - let's go
+#     - hey dude
+#     - goodmorning
+#     - goodevening
+#     - good afternoon
+
+# - intent: goodbye
+#   examples: |
+#     - cu
+#     - good by
+#     - cee you later
+#     - good night
+#     - bye
+#     - goodbye
+#     - have a nice day
+#     - see you around
+#     - bye bye
+#     - see you later
+
+# - intent: affirm
+#   examples: |
+#     - yes
+#     - y
+#     - indeed
+#     - of course
+#     - that sounds good
+#     - correct
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
+
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
